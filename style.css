@@ -1,5 +1,4 @@
 :root {
-
    /** Primary **/
    --colorCyan: hsl(179, 62%, 43%);
    --colorCyan-light: hsla(179, 62%, 43%, .8);
@@ -46,7 +45,6 @@ body {
 }
 
 .price-grid {
-   width: 43%;
    display: flex;
    flex-direction: column;
    border-radius: 1rem;
@@ -65,7 +63,6 @@ body {
 }
 
 .details {
-   flex: 1 0 40%;
    background-color: #FFF;
 }
 
@@ -75,6 +72,10 @@ body {
    padding: 4rem;
 }
 
+.details{
+   padding-right: 8rem;
+}
+
 .details--sub-title {
    color: var(--colorBrightYellow);
 }
@@ -82,10 +83,10 @@ body {
 .details--paragraph {
    color: var(--colorGrayishBlue);
    font-size: 1.5rem;
+   white-space: pre-line;
 }
 
 .card {
-   flex: 1 0 60%;
    display: flex;
    color: #FFF;
 }
@@ -112,8 +113,8 @@ body {
 .card__subscription--pricing span {
    color: var(--colorLightGray-light);
    font-weight: 400;
-   font-size: 1.4rem;
-   margin-left: 1.5rem;
+   font-size: 1.5rem;
+   margin-left: 1rem;
 }
 
 .card__subscription--paragraph {
@@ -132,8 +133,9 @@ body {
 
 .card__why-us--paragraph {
    color: rgba(255, 255, 255, .5);
-   font-size: 1.3rem;
+   font-size: 1.4rem;
    line-height: 1.4;
+   white-space: pre-line;
 }
 
 .btn {
@@ -159,4 +161,32 @@ body {
 .btn:active {
    box-shadow: 0 1px 5px rgba(0, 0, 0, .25);
    transform: scale(.98);
+}
+
+/** Responsive Design **/
+
+@media screen and (max-width: 580px) {
+
+   .header {
+      padding: 8rem 4.5rem;
+      height: auto;
+   }
+
+   .details,
+   .card__subscription,
+   .card__why-us {
+      padding: 2rem;
+   }
+
+   .card {
+      flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 450px) {
+
+   .details--paragraph {
+      white-space: normal;
+   }
+
 }
